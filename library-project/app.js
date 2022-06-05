@@ -75,4 +75,18 @@ console.log(historyOfEverything.isCheckedOut);
 historyOfEverything.addRating(4);
 historyOfEverything.addRating(5);
 historyOfEverything.addRating(5);
-console.log(historyOfEverything.getAverageRating())
+console.log(historyOfEverything.getAverageRating());
+
+//create instance of a movie
+const speed = new Movie('Speed', 'Jan de Bont', 116);
+//toggle the check out status of the movie
+speed.toggleCheckoutStatus();
+//show the current check out status
+console.log(speed.isCheckedOut);
+//Add new ratings to the movie
+speed.addRating(1);
+speed.addRating(1);
+speed.addRating(5);
+//Log the average rating of the movie
+console.log(speed.getAverageRating());
+
