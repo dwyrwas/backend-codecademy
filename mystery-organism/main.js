@@ -26,6 +26,18 @@ const pAequorFactory = (specimen, dna) => {
       }
       this.dna[currentBaseIndex] = newBase
       return this.dna;
+    },
+    compareDNA: (pAequor) => {
+      let spec1dna = this.dna
+      let spec2dna = pAequor.dna
+      let samedna = 0
+      for (let i=0; i<spec1dna.length; i++){
+        if (spec1dna[i] === spec2dna[i]){
+          samedna++
+        }
+      }
+      let percentdna = samedna/spec1dna.length*100
+      console.log(`The two specimens have ${percentdna}% DNA in common.`);    
     }
   }
 };
