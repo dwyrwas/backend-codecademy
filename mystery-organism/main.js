@@ -47,6 +47,26 @@ const pAequorFactory = (specimen, dna) => {
         }
       }
       return goodDNA/15*100 >= 60
+    },
+    complementStrand(){
+      let complement = []
+      for (i=0; i<15; i++){
+        switch (this.dna[i]){
+          case "T":
+            complement.push("A");
+            break;
+          case "T":
+            complement.push("A");
+            break;
+          case "C":
+            complement.push("G");
+            break;
+          case "G":
+            complement.push("C");
+            break;
+        };
+      }
+      return complement;
     }
   }
 };
@@ -55,6 +75,8 @@ let sample = []
 for (i=0; i<30; i++){
   sample.push(pAequorFactory(i, mockUpStrand()))
 };
+console.log(sample[0]);
+console.log(sample[0].complementStrand());
 
 
 
